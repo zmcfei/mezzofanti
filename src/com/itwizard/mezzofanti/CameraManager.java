@@ -23,11 +23,9 @@
 package com.itwizard.mezzofanti;
 import java.io.IOException;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.hardware.Camera;
-import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;

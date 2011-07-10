@@ -887,7 +887,8 @@ public class ResultsActivity  extends Activity
      */
 	private void ShowDialogAddWordToDictionary()
 	{
-		if ( OCR.get().IsValidComposedWord(m_sSelectedText.toLowerCase()) )
+		OCR.get();
+		if ( OCR.IsValidComposedWord(m_sSelectedText.toLowerCase()) )
 		{
 			Log.v(TAG, "ShowDialogAddWordToDictionary: word ["+ m_sSelectedText +"] already in dictionary");
 			return;

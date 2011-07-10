@@ -10,7 +10,6 @@ import java.util.Calendar;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -19,7 +18,6 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.pm.ActivityInfo; 
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.net.Uri;
@@ -31,9 +29,7 @@ import android.preference.PreferenceManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Rect;
 import android.hardware.SensorManager;
-import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -45,7 +41,6 @@ import android.view.View;
 import android.view.KeyEvent;
 import android.view.SurfaceView; 
 import android.view.View.OnClickListener;
-import android.view.View.OnLongClickListener;
 import android.app.ProgressDialog;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
@@ -1037,7 +1032,7 @@ public class Mezzofanti extends Activity implements SurfaceHolder.Callback, View
 				if (m_bSdcardMounted == false)
 					return;
 
-				String val = "";
+				String val = "";				
 				if ((orientation >= 0 && orientation <= 10 ) || (orientation >= 350 && orientation <= 360 ))
 				{
 					val = getString(R.string.mezzofanti_status_bar_vertical) + " (" + orientation + ")";
@@ -1066,8 +1061,10 @@ public class Mezzofanti extends Activity implements SurfaceHolder.Callback, View
 						val = "" + orientation;
 					}
 				}
+				Log.v(val, val);
 			} // end public void onOrientationChanged (int orientation) 
 		}; // end mListener = new ... 
+		
 	}
 
 	/**

@@ -300,7 +300,7 @@ public class DownloadManager implements Runnable
 	    {
 	      zipFile = new ZipFile(zipname);
 	
-	      Enumeration entries = zipFile.entries();
+	      Enumeration<? extends ZipEntry> entries = zipFile.entries();
 	      while (entries.hasMoreElements()) 
 	      {
 	        ZipEntry entry = (ZipEntry)entries.nextElement();
@@ -335,7 +335,7 @@ public class DownloadManager implements Runnable
 	    {
 	      zipFile = new ZipFile(zipname);
 	
-	      Enumeration entries = zipFile.entries();
+	      Enumeration<? extends ZipEntry> entries = zipFile.entries();
 	      while (entries.hasMoreElements()) 
 	      {
 	        ZipEntry entry = (ZipEntry)entries.nextElement();
