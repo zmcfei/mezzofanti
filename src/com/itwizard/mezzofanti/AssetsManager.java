@@ -126,7 +126,7 @@ public class AssetsManager implements Runnable
         {
             String storageDirectory = Environment.getExternalStorageDirectory().toString();
             StatFs stat = new StatFs(storageDirectory);
-            return stat.getAvailableBlocks() * stat.getBlockSize();
+            return ((long) stat.getAvailableBlocks()) * ((long) stat.getBlockSize());
         } 
 	    catch (Exception ex) 
 	    {
